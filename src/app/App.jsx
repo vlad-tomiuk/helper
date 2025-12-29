@@ -9,7 +9,7 @@ import AspectRatioCalculator from '../tools/aspect-ratio-calculator/AspectRatioC
 
 export default function App() {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={import.meta.env.BASE_URL}>
 			<div className="min-h-screen bg-gray-50 dark:bg-[#121212] transition-colors duration-300">
 				<Header />
 				<Routes>
