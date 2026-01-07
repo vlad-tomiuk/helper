@@ -32,7 +32,7 @@ export default function CopyButton({ text, className }) {
 			)}
 		>
 			{copied ? <Check size={14} /> : <Copy size={14} />}
-			{copied ? t('copy.copied') : t('copy.copy')}
+			{copied ? t('layout.copy.copied') : t('layout.copy.copy')}
 		</button>
 	);
 }

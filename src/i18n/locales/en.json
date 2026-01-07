@@ -1,18 +1,24 @@
 {
-	"app": {
-		"title": "Helper",
-		"subtitle": "SVG & CSS Tools"
-	},
-	"header": {
-		"theme": "Toggle theme",
-		"lang": "Language"
-	},
-	"common": {
-		"backToHome": "Back to Home"
+	"layout": {
+		"app": {
+			"title": "Helper",
+			"subtitle": "SVG & CSS Tools"
+		},
+		"header": {
+			"theme": "Toggle theme",
+			"lang": "Language"
+		},
+		"common": {
+			"backToHome": "Back to Home"
+		},
+		"copy": {
+			"copy": "Copy",
+			"copied": "Copied"
+		}
 	},
 	"home": {
 		"title": "Helper",
-		"subtitle": "Professional SVG and CSS tools for developers and designers",
+		"subtitle": "If you’re a developer and somehow stumbled upon this page — welcome! Feel free to join in: suggest improvements or share the cards and tools that you frequently use in your own workflow. Let’s build a workspace that actually makes our lives easier.",
 		"openTool": "Open Tool",
 		"comingSoon": "Coming Soon"
 	},
@@ -21,57 +27,105 @@
 			"name": "SVG to ClipPath",
 			"desc": "Convert SVG paths to CSS clip-path with normalization and preview"
 		},
-		"shapeGenerator": {
-			"name": "SVG Shape Generator",
-			"desc": "Generate custom SVG shapes like blobs, waves, and patterns",
-			"instructions": {
-				"polygon": "💡 Drag points to customize. Click on a line to add a point. Right-click to remove (min 3 points).",
-				"custom": "💡 Click to create points anywhere. Right-click to remove (min 3 points).",
-				"default": "💡 Drag the points on the preview to customize the shape."
-			}
-		},
-		"clippyEditor": {
-			"name": "Shape Generator",
-			"desc": "Create ClipPath shapes: basic and custom shapes"
+		"clipPathGenerator": {
+			"name": "CSS Clip-Path Generator",
+			"desc": "Interactive editor for creating standard and custom polygonal CSS clip-paths"
 		},
 		"aspectRatioCalc": {
 			"name": "Aspect Ratio Calculator",
 			"desc": "Calculate and convert aspect ratios for responsive design"
+		},
+		"masterKeyGenerator": {
+			"name": "MasterKey Generator",
+			"desc": "Generate strong and secure passwords or keys"
+		},
+		"shapeGenerator": {
+			"name": "Custom Shapes",
+			"desc": "Generate customizable organic blobs and shapes"
 		}
 	},
-	"upload": {
-		"label": "Upload SVG",
-		"drop": "Drop SVG here or click",
-		"error": "Invalid SVG file"
+	"svgToClippath": {
+		"upload": {
+			"label": "Upload SVG",
+			"drop": "Drop SVG here or click",
+			"error": "Invalid SVG file"
+		},
+		"settings": {
+			"title": "Settings",
+			"tolerance": "Tolerance",
+			"decimals": "Decimals",
+			"outputMode": "Output Mode",
+			"pathSelector": "Select Path",
+			"pathLabel": "Path {{index}}"
+		},
+		"main": {
+			"title": "Transform SVGs into CSS Clip Paths",
+			"desc": "Upload any SVG and get a responsive, optimized clip-path code in seconds.",
+			"input": "Input",
+			"reset": "Reset / New Upload",
+			"pathsDetected": "{{count}} paths detected",
+			"noSvg": "No SVG loaded"
+		},
+		"preview": {
+			"title": "Preview",
+			"original": "Original",
+			"result": "Result",
+			"aspectRatio": "Aspect Ratio"
+		},
+		"output": {
+			"cssTab": "CSS Snippet",
+			"svgTab": "SVG ClipPath"
+		}
 	},
-	"settings": {
-		"title": "Settings",
-		"tolerance": "Tolerance",
-		"decimals": "Decimals",
-		"outputMode": "Output Mode",
-		"pathSelector": "Select Path",
-		"pathLabel": "Path {{index}}"
+	"clipPathGenerator": {
+		"instructions": {
+			"polygon": "💡 Drag points to customize. Click on a line to add a point. Right-click to remove (min 3 points).",
+			"custom": "💡 Click to create points anywhere. Right-click to remove (min 3 points).",
+			"default": "💡 Drag the points on the preview to customize the shape."
+		},
+		"shapes": "Shapes",
+		"cssOutput": "CSS Output"
 	},
-	"main": {
-		"title": "Transform SVGs into CSS Clip Paths",
-		"desc": "Upload any SVG and get a responsive, optimized clip-path code in seconds.",
-		"input": "Input",
-		"reset": "Reset / New Upload",
-		"pathsDetected": "{{count}} paths detected",
-		"noSvg": "No SVG loaded"
+	"shapeGenerator": {
+		"title": "Blob Generator",
+		"complexity": "Complexity",
+		"uniqueness": "Uniqueness",
+		"style": "Style",
+		"solid": "Solid",
+		"outline": "Outline",
+		"appearance": "Appearance",
+		"resetColor": "Reset Color to Black",
+		"switchToSolid": "Switch to Solid",
+		"switchToGradient": "Switch to Gradient",
+		"svg": "SVG",
+		"png": "PNG",
+		"copyCode": "Copy SVG Code",
+		"regenerate": "Regenerate (Keep Settings)",
+		"randomize": "Randomize All",
+		"copiedSuccess": "SVG code copied to clipboard",
+		"canvas": {
+			"mobile": "Mobile (360x640)",
+			"tablet": "Tablet (768x1024)",
+			"laptop": "Laptop (1280x800)",
+			"desktop": "Desktop (1600x900)",
+			"hidePoints": "Hide Points",
+			"showPoints": "Show Points",
+			"resetSize": "Reset Size & Shape"
+		}
 	},
-	"preview": {
-		"title": "Preview",
-		"original": "Original",
+	"aspectRatioCalculator": {
+		"title": "Aspect Ratio Calculator",
+		"upload": "Upload Image",
+		"drop": "Drop image here or click to upload",
+		"or": "OR",
+		"manualInput": "Manual Input",
+		"width": "Width (px)",
+		"height": "Height (px)",
+		"dimensions": "Dimensions",
+		"ratio": "Aspect Ratio",
+		"cssOutput": "CSS Output",
 		"result": "Result",
-		"aspectRatio": "Aspect Ratio"
-	},
-	"output": {
-		"cssTab": "CSS Snippet",
-		"svgTab": "SVG ClipPath"
-	},
-	"copy": {
-		"copy": "Copy",
-		"copied": "Copied"
+		"preview": "Preview",
+		"calculate": "Calculate"
 	}
 }

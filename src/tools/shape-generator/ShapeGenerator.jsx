@@ -55,12 +55,12 @@ export default function ShapeGenerator() {
                 className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors mb-6"
             >
                 <ArrowLeft size={20} />
-                <span className="font-medium">{t('common.backToHome')}</span>
+                <span className="font-medium">{t('layout.common.backToHome')}</span>
             </Link>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:h-[calc(100vh-140px)] lg:min-h-[600px] h-auto">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 xl:h-[calc(100vh-140px)] xl:min-h-[600px] h-auto">
                 {/* Left: Controls */}
-                <div className="flex flex-col gap-6 order-2 lg:order-1">
+                <div className="flex flex-col gap-6 order-2 xl:order-1">
                     <ControlsPanel 
                         currentShape={currentShape} 
                         onShapeSelect={handleShapeSelect}
@@ -90,7 +90,7 @@ export default function ShapeGenerator() {
                 </div>
 
                 {/* Center/Right: Canvas (Takes 2 cols) */}
-                <div className="lg:col-span-2 flex flex-col order-1 lg:order-2">
+                <div className="xl:col-span-2 flex flex-col order-1 xl:order-2">
                     <ShapeCanvas 
                         model={model} 
                         type={currentShape?.type || 'polygon'}

@@ -86,7 +86,7 @@ export default function SvgToClipPath() {
 				className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors mb-6"
 			>
 				<ArrowLeft size={20} />
-				<span className="font-medium">{t('common.backToHome')}</span>
+				<span className="font-medium">{t('layout.common.backToHome')}</span>
 			</Link>
 
 			{!svgRaw ? (

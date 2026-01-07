@@ -50,7 +50,7 @@ export default function Header() {
 						'hover:bg-gray-200 dark:hover:bg-gray-700',
 						'focus:outline-none focus:ring-2 focus:ring-indigo-500',
 					)}
-					aria-label={t('header.theme')}
+					aria-label={t('layout.header.theme')}
 				>
 					{theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
 				</button>

@@ -13,7 +13,7 @@ export default function SvgUploader({ onUpload, className }) {
 			reader.onload = (e) => onUpload(e.target.result);
 			reader.readAsText(file);
 		} else {
-			alert(t('upload.error'));
+			alert(t('svgToClippath.upload.error'));
 		}
 	};
 
@@ -51,10 +51,10 @@ export default function SvgUploader({ onUpload, className }) {
 				</div>
 				<div className="space-y-1">
 					<p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-						{t('upload.label')}
+						{t('svgToClippath.upload.label')}
 					</p>
 					<p className="text-xs text-gray-500 dark:text-gray-400">
-						{t('upload.drop')}
+						{t('svgToClippath.upload.drop')}
 					</p>
 				</div>
 			</div>

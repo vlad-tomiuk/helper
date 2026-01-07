@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Scissors, Shapes, MousePointer2, Ratio } from 'lucide-react';
+import { Scissors, Shapes, MousePointer2, Ratio, Key } from 'lucide-react';
 
 const tools = [
 	{
@@ -16,18 +16,18 @@ const tools = [
 	{
 		id: 'svg-shape-generator',
 		icon: Shapes,
-		nameKey: 'tools.shapeGenerator.name',
-		descKey: 'tools.shapeGenerator.desc',
-		path: '/shape-generator',
+		nameKey: 'tools.clipPathGenerator.name',
+		descKey: 'tools.clipPathGenerator.desc',
+		path: '/clip-path-generator',
 		color: 'purple',
 		available: true,
 	},
 	{
-		id: 'clippy-editor',
+		id: 'custom-shapes',
 		icon: MousePointer2,
-		nameKey: 'tools.clippyEditor.name',
-		descKey: 'tools.clippyEditor.desc',
-		path: '/clippy-editor',
+		nameKey: 'tools.shapeGenerator.name',
+		descKey: 'tools.shapeGenerator.desc',
+		path: '/shape-generator',
 		color: 'pink',
 		available: true,
 	},
@@ -40,6 +40,15 @@ const tools = [
 		color: 'blue',
 		available: true,
 	},
+	{
+		id: 'master-key-generator',
+		icon: Key,
+		nameKey: 'tools.masterKeyGenerator.name',
+		descKey: 'tools.masterKeyGenerator.desc',
+		path: '/master-key-generator',
+		color: 'green',
+		available: true,
+	},
 ];
 
 const colorClasses = {
@@ -47,6 +56,8 @@ const colorClasses = {
 	purple: 'from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700',
 	pink: 'from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700',
 	blue: 'from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',
+	yellow: 'from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600',
+	green: 'from-green-500 to-green-600 hover:from-green-600 hover:to-green-700',
 };
 
 export default function HomePage() {

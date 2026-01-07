@@ -20,7 +20,7 @@ export default function PreviewPane({
 			)}
 		>
 			<div className="flex items-center justify-between min-h-[60px] pb-3 border-b border-gray-100 dark:border-gray-800">
-				<h2 className="font-semibold text-gray-900 dark:text-white">{t('preview.title')}</h2>
+				<h2 className="font-semibold text-gray-900 dark:text-white">{t('svgToClippath.preview.title')}</h2>
 
 				{svgRaw && (
 					<div className="flex items-center gap-3 select-none">
@@ -28,7 +28,7 @@ export default function PreviewPane({
 							className="text-xs text-gray-500 dark:text-gray-400 font-medium cursor-pointer min-w-[50px] text-right"
 							htmlFor="preview-mode-switch"
 						>
-							{showResult ? t('preview.result') : t('preview.original')}
+							{showResult ? t('svgToClippath.preview.result') : t('svgToClippath.preview.original')}
 						</label>
 						<Switch.Root
 							className="group relative flex h-[26px] w-[48px] items-center shrink-0 cursor-pointer rounded-full bg-gray-200 dark:bg-gray-700 outline-none shadow-inner data-[state=checked]:bg-indigo-500 transition-colors pl-0"
@@ -45,7 +45,7 @@ export default function PreviewPane({
 
 			<div className="flex-1 flex items-center justify-center bg-gray-100 dark:bg-[#151515] rounded-xl overflow-hidden relative min-h-[300px] p-4 mt-6">
 				{!svgRaw ? (
-					<div className="text-gray-400 text-sm">{t('main.noSvg')}</div>
+					<div className="text-gray-400 text-sm">{t('svgToClippath.main.noSvg')}</div>
 				) : (
 					<div className="relative w-full h-full flex items-center justify-center">
 						{!showResult ? (

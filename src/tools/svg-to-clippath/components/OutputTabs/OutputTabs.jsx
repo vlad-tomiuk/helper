@@ -19,8 +19,8 @@ export default function OutputTabs({ cssCode, svgCode, className }) {
 		>
 			<div className="border-b border-gray-200 dark:border-gray-800 px-5 pt-5">
 				<Tabs.List className="flex gap-2 items-center h-[60px] pb-3">
-					<TabTrigger value="css">{t('output.cssTab')}</TabTrigger>
-					<TabTrigger value="svg">{t('output.svgTab')}</TabTrigger>
+					<TabTrigger value="css">{t('svgToClippath.output.cssTab')}</TabTrigger>
+					<TabTrigger value="svg">{t('svgToClippath.output.svgTab')}</TabTrigger>
 				</Tabs.List>
 			</div>
 

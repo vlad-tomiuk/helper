@@ -4,8 +4,9 @@ import Header from '../shared/components/Header/Header';
 import HomePage from './HomePage';
 import SvgToClipPath from '../tools/svg-to-clippath/SvgToClipPath';
 import ShapeGenerator from '../tools/shape-generator/ShapeGenerator';
-import ClippyEditor from '../tools/clippy-editor/ClippyEditor';
 import AspectRatioCalculator from '../tools/aspect-ratio-calculator/AspectRatioCalculator';
+import BlobGenerator from '../tools/custom-shapes/BlobGenerator';
+import MasterKeyGenerator from '../tools/master-key-generator/MasterKeyGenerator';
 
 export default function App() {
 	return (
@@ -15,9 +16,10 @@ export default function App() {
 				<Routes>
 					<Route path="/" element={<HomePage />} />
 					<Route path="/svg-to-clippath" element={<SvgToClipPath />} />
-					<Route path="/shape-generator" element={<ShapeGenerator />} />
-					<Route path="/clippy-editor" element={<ClippyEditor />} />
+					<Route path="/clip-path-generator" element={<ShapeGenerator />} />
+					<Route path="/shape-generator" element={<BlobGenerator />} />
 					<Route path="/aspect-ratio-calculator" element={<AspectRatioCalculator />} />
+					<Route path="/master-key-generator" element={<MasterKeyGenerator />} />
 				</Routes>
 			</div>
 		</BrowserRouter>

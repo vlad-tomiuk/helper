@@ -141,7 +141,7 @@ export default function ControlsPanel({
         )}>
             <div className="flex items-center justify-between mb-4">
                 <h2 className="font-semibold text-gray-900 dark:text-white">
-                    Shapes
+                    {t('clipPathGenerator.shapes')}
                 </h2>
             </div>
 
@@ -177,10 +177,10 @@ export default function ControlsPanel({
             <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg text-sm text-gray-600 dark:text-gray-400">
                 <p>
                     {currentShape.id === 'custom' 
-                        ? t('tools.shapeGenerator.instructions.custom')
+                        ? t('clipPathGenerator.instructions.custom')
                         : currentShape.type === 'polygon'
-                            ? t('tools.shapeGenerator.instructions.polygon')
-                            : t('tools.shapeGenerator.instructions.default')}
+                            ? t('clipPathGenerator.instructions.polygon')
+                            : t('clipPathGenerator.instructions.default')}
                 </p>
             </div>
         </div>

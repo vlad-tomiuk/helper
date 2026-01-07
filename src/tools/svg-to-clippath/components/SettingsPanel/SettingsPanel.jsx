@@ -30,14 +30,14 @@ export default function SettingsPanel({
 			<div className="flex items-center justify-between min-h-[60px] pb-3 border-b border-gray-100 dark:border-gray-800">
 				<div className="flex items-center gap-2">
 					<Settings2 size={18} className="text-indigo-500" />
-					<h2 className="font-semibold text-gray-900 dark:text-white">{t('settings.title')}</h2>
+					<h2 className="font-semibold text-gray-900 dark:text-white">{t('svgToClippath.settings.title')}</h2>
 				</div>
 				{onReset && (
 					<button
 						onClick={onReset}
 						className="text-xs text-red-500 hover:text-red-600 dark:hover:text-red-400 font-medium transition-colors"
 					>
-						{t('main.reset')}
+						{t('svgToClippath.main.reset')}
 					</button>
 				)}
 			</div>
@@ -47,7 +47,7 @@ export default function SettingsPanel({
 				{paths.length > 0 && (
 					<div className="space-y-2">
 						<label className="text-xs font-medium text-gray-500 uppercase tracking-wider">
-							{t('settings.pathSelector')}
+							{t('svgToClippath.settings.pathSelector')}
 						</label>
 						<select
 							value={selectedPathIndex}
@@ -56,7 +56,7 @@ export default function SettingsPanel({
 						>
 							              {paths.map((p, i) => (
                 <option key={i} value={i}>
-                  {t('settings.pathLabel', { index: i + 1 })} ({p.d.slice(0, 30)}...)
+                  {t('svgToClippath.settings.pathLabel', { index: i + 1 })} ({p.d.slice(0, 30)}...)
                 </option>
               ))}
 						</select>
@@ -67,7 +67,7 @@ export default function SettingsPanel({
 				<div className="space-y-3">
 					<div className="flex justify-between items-center">
 						<label className="text-xs font-medium text-gray-500 uppercase tracking-wider">
-							{t('settings.tolerance')}
+							{t('svgToClippath.settings.tolerance')}
 						</label>
 						<span className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded font-mono text-gray-700 dark:text-gray-300">
 							{settings.tolerance} px
@@ -91,7 +91,7 @@ export default function SettingsPanel({
 				{/* Decimals Selector */}
 				<div className="space-y-2">
 					<label className="text-xs font-medium text-gray-500 uppercase tracking-wider">
-						{t('settings.decimals')}
+						{t('svgToClippath.settings.decimals')}
 					</label>
 					<div className="grid grid-cols-4 gap-2">
 						{[1, 2, 3, 4].map((num) => (

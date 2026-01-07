@@ -205,7 +205,7 @@ export default function CodeOutput({ model, type, onUpdate, className }) {
         )}>
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-[#1a1a1a]">
                 <h3 className="font-medium text-sm text-gray-700 dark:text-gray-200">
-                    CSS Output
+                    {t('clipPathGenerator.cssOutput')}
                 </h3>
                 <CopyButton text={cssCodeText} />
             </div>
