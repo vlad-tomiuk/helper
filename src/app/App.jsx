@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from '../shared/components/Header/Header';
 import HomePage from './HomePage';
 import SvgToClipPath from '../tools/svg-to-clippath/SvgToClipPath';
@@ -10,7 +10,7 @@ import MasterKeyGenerator from '../tools/master-key-generator/MasterKeyGenerator
 
 export default function App() {
 	return (
-		<BrowserRouter basename={import.meta.env.BASE_URL}>
+		<HashRouter>
 			<div className="min-h-screen bg-gray-50 dark:bg-[#121212] transition-colors duration-300">
 				<Header />
 				<Routes>
@@ -22,6 +22,6 @@ export default function App() {
 					<Route path="/master-key-generator" element={<MasterKeyGenerator />} />
 				</Routes>
 			</div>
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
