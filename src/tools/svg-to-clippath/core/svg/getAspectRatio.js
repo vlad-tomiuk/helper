@@ -30,19 +30,19 @@ export function getAspectRatio(svgDoc) {
 	// This results in min / max.
 	const maxDim = Math.max(w, h);
 	const minDim = Math.min(w, h);
-	
+
 	// Avoid division by zero
 	if (maxDim === 0) return 1;
 
 	const k = maxDim / 100;
-	const ratio = (minDim / k) / 100; // This is minDim / maxDim
+	const ratio = minDim / k / 100; // This is minDim / maxDim
 
 	// CSS aspect-ratio is width / height.
 	// If width is the larger side (landscape), we need max / min = 1 / ratio.
 	// If height is the larger side (portrait), we need min / max = ratio.
 	// If square, ratio is 1.
 
-	const cssAspectRatio = w >= h ? (1 / ratio) : ratio;
-	
+	const cssAspectRatio = w >= h ? 1 / ratio : ratio;
+
 	return Number(cssAspectRatio.toFixed(5));
 }

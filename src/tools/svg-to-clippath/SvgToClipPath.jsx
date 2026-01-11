@@ -50,7 +50,11 @@ export default function SvgToClipPath() {
 
 		try {
 			const pathData = paths[selectedPathIndex];
-			const polygons = pathsToPolygons(pathData, settings.decimals, settings.tolerance);
+			const polygons = pathsToPolygons(
+				pathData,
+				settings.decimals,
+				settings.tolerance,
+			);
 
 			let normalizedPolygons = polygons;
 			let calculatedAspectRatio = 1;
@@ -58,7 +62,9 @@ export default function SvgToClipPath() {
 			if (settings.normalize && polygons.length > 0) {
 				const allPoints = polygons.flat();
 				const bbox = getPointsBBox(allPoints);
-				calculatedAspectRatio = parseFloat((bbox.width / bbox.height).toFixed(4));
+				calculatedAspectRatio = parseFloat(
+					(bbox.width / bbox.height).toFixed(4),
+				);
 				normalizedPolygons = polygons.map((polygon) =>
 					normalizePoints(polygon, settings.decimals),
 				);
@@ -67,9 +73,15 @@ export default function SvgToClipPath() {
 			setAspectRatio(calculatedAspectRatio);
 
 			// Generate two SVGs: one for preview (fixed ID) and one for output (custom ID)
-			const previewSvg = buildClipPathSvg(normalizedPolygons, 'clipPath-preview');
+			const previewSvg = buildClipPathSvg(
+				normalizedPolygons,
+				'clipPath-preview',
+			);
 			const outputSvg = buildClipPathSvg(normalizedPolygons, 'myClipPath');
-			const cssCode = buildCssSnippet({ id: 'myClipPath', aspectRatio: calculatedAspectRatio });
+			const cssCode = buildCssSnippet({
+				id: 'myClipPath',
+				aspectRatio: calculatedAspectRatio,
+			});
 
 			return { cssCode, svgCode: outputSvg, previewSvg };
 		} catch (error) {

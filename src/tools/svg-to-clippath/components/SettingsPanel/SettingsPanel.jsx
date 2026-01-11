@@ -30,7 +30,9 @@ export default function SettingsPanel({
 			<div className="flex items-center justify-between min-h-[60px] pb-3 border-b border-gray-100 dark:border-gray-800">
 				<div className="flex items-center gap-2">
 					<Settings2 size={18} className="text-indigo-500" />
-					<h2 className="font-semibold text-gray-900 dark:text-white">{t('svgToClippath.settings.title')}</h2>
+					<h2 className="font-semibold text-gray-900 dark:text-white">
+						{t('svgToClippath.settings.title')}
+					</h2>
 				</div>
 				{onReset && (
 					<button
@@ -54,11 +56,12 @@ export default function SettingsPanel({
 							onChange={(e) => onPathSelect(Number(e.target.value))}
 							className="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none transition-all"
 						>
-							              {paths.map((p, i) => (
-                <option key={i} value={i}>
-                  {t('svgToClippath.settings.pathLabel', { index: i + 1 })} ({p.d.slice(0, 30)}...)
-                </option>
-              ))}
+							{paths.map((p, i) => (
+								<option key={i} value={i}>
+									{t('svgToClippath.settings.pathLabel', { index: i + 1 })} (
+									{p.d.slice(0, 30)}...)
+								</option>
+							))}
 						</select>
 					</div>
 				)}

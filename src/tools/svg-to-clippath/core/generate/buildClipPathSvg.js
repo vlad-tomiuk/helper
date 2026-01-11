@@ -2,15 +2,18 @@ import { pointsToString } from '../convert/normalizePoints';
 
 export function buildClipPathSvg(polygons, id = 'bgFigure') {
 	let polygonElements = '';
-	
+
 	// Check if it's an array of polygons (array of arrays of points)
 	// or a single polygon (array of points) - detecting by checking first element
-	const isArrayOfPolygons = Array.isArray(polygons) && polygons.length > 0 && Array.isArray(polygons[0][0]);
-	
+	const isArrayOfPolygons =
+		Array.isArray(polygons) &&
+		polygons.length > 0 &&
+		Array.isArray(polygons[0][0]);
+
 	if (isArrayOfPolygons) {
-		polygonElements = polygons.map(points => 
-			`<polygon points="${pointsToString(points)}" />`
-		).join('\n      ');
+		polygonElements = polygons
+			.map((points) => `<polygon points="${pointsToString(points)}" />`)
+			.join('\n      ');
 	} else {
 		// Fallback for single polygon
 		polygonElements = `<polygon points="${pointsToString(polygons)}" />`;

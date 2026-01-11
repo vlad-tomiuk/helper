@@ -52,11 +52,14 @@ const tools = [
 ];
 
 const colorClasses = {
-	indigo: 'from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700',
-	purple: 'from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700',
+	indigo:
+		'from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700',
+	purple:
+		'from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700',
 	pink: 'from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700',
 	blue: 'from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',
-	yellow: 'from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600',
+	yellow:
+		'from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600',
 	green: 'from-green-500 to-green-600 hover:from-green-600 hover:to-green-700',
 };
 

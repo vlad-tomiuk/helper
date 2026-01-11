@@ -18,8 +18,14 @@ export default function App() {
 					<Route path="/svg-to-clippath" element={<SvgToClipPath />} />
 					<Route path="/clip-path-generator" element={<ShapeGenerator />} />
 					<Route path="/shape-generator" element={<BlobGenerator />} />
-					<Route path="/aspect-ratio-calculator" element={<AspectRatioCalculator />} />
-					<Route path="/master-key-generator" element={<MasterKeyGenerator />} />
+					<Route
+						path="/aspect-ratio-calculator"
+						element={<AspectRatioCalculator />}
+					/>
+					<Route
+						path="/master-key-generator"
+						element={<MasterKeyGenerator />}
+					/>
 				</Routes>
 			</div>
 		</HashRouter>

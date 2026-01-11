@@ -8,9 +8,17 @@ import React from 'react';
  * This component only provides styling consistent with the rest of the app.
  */
 export default function Controls({ children }) {
-  return (
-    <div className="controls" style={{ marginBottom: '1rem', display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-      {children}
-    </div>
-  );
+	return (
+		<div
+			className="controls"
+			style={{
+				marginBottom: '1rem',
+				display: 'flex',
+				flexWrap: 'wrap',
+				gap: '1rem',
+			}}
+		>
+			{children}
+		</div>
+	);
 }

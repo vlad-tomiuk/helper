@@ -57,241 +57,241 @@ export const SHAPES = {
 			{ x: 39, y: 35 },
 		],
 	},
-    rhombus: {
-        id: 'rhombus',
-        name: 'Rhombus',
-        points: [
-            { x: 50, y: 0 },
-            { x: 100, y: 50 },
-            { x: 50, y: 100 },
-            { x: 0, y: 50 }
-        ]
-    },
-    trapezoid: {
-        id: 'trapezoid',
-        name: 'Trapezoid',
-        points: [
-            { x: 20, y: 0 },
-            { x: 80, y: 0 },
-            { x: 100, y: 100 },
-            { x: 0, y: 100 }
-        ]
-    },
-    parallelogram: {
-        id: 'parallelogram',
-        name: 'Parallelogram',
-        points: [
-            { x: 25, y: 0 },
-            { x: 100, y: 0 },
-            { x: 75, y: 100 },
-            { x: 0, y: 100 }
-        ]
-    },
-    arrowLeft: {
-        id: 'arrowLeft',
-        name: 'Left Arrow',
-        points: [
-            { x: 100, y: 25 },
-            { x: 40, y: 25 },
-            { x: 40, y: 0 },
-            { x: 0, y: 50 },
-            { x: 40, y: 100 },
-            { x: 40, y: 75 },
-            { x: 100, y: 75 }
-        ]
-    },
-    arrowRight: {
-        id: 'arrowRight',
-        name: 'Right Arrow',
-        points: [
-            { x: 0, y: 25 },
-            { x: 60, y: 25 },
-            { x: 60, y: 0 },
-            { x: 100, y: 50 },
-            { x: 60, y: 100 },
-            { x: 60, y: 75 },
-            { x: 0, y: 75 }
-        ]
-    },
-    octagon: {
-        id: 'octagon',
-        name: 'Octagon',
-        points: [
-            { x: 30, y: 0 },
-            { x: 70, y: 0 },
-            { x: 100, y: 30 },
-            { x: 100, y: 70 },
-            { x: 70, y: 100 },
-            { x: 30, y: 100 },
-            { x: 0, y: 70 },
-            { x: 0, y: 30 }
-        ]
-    },
-    decagon: {
-        id: 'decagon',
-        name: 'Decagon',
-        points: [
-            { x: 50, y: 0 },
-            { x: 80, y: 10 },
-            { x: 100, y: 35 },
-            { x: 100, y: 65 },
-            { x: 80, y: 90 },
-            { x: 50, y: 100 },
-            { x: 20, y: 90 },
-            { x: 0, y: 65 },
-            { x: 0, y: 35 },
-            { x: 20, y: 10 }
-        ]
-    },
-    bevel: {
-        id: 'bevel',
-        name: 'Bevel',
-        points: [
-            { x: 20, y: 0 },
-            { x: 80, y: 0 },
-            { x: 100, y: 20 },
-            { x: 100, y: 80 },
-            { x: 80, y: 100 },
-            { x: 20, y: 100 },
-            { x: 0, y: 80 },
-            { x: 0, y: 20 }
-        ]
-    },
-    rabbet: {
-        id: 'rabbet',
-        name: 'Rabbet',
-        points: [
-            { x: 20, y: 0 },
-            { x: 80, y: 0 },
-            { x: 80, y: 20 },
-            { x: 100, y: 20 },
-            { x: 100, y: 100 },
-            { x: 0, y: 100 },
-            { x: 0, y: 20 },
-            { x: 20, y: 20 }
-        ]
-    },
-    leftPoint: {
-        id: 'leftPoint',
-        name: 'Left Point',
-        points: [
-            { x: 0, y: 50 },
-            { x: 25, y: 0 },
-            { x: 100, y: 0 },
-            { x: 100, y: 100 },
-            { x: 25, y: 100 }
-        ]
-    },
-    rightPoint: {
-        id: 'rightPoint',
-        name: 'Right Point',
-        points: [
-            { x: 0, y: 0 },
-            { x: 75, y: 0 },
-            { x: 100, y: 50 },
-            { x: 75, y: 100 },
-            { x: 0, y: 100 }
-        ]
-    },
-    leftChevron: {
-        id: 'leftChevron',
-        name: 'Left Chevron',
-        points: [
-            { x: 100, y: 0 },
-            { x: 0, y: 50 },
-            { x: 100, y: 100 },
-            { x: 70, y: 50 }
-        ]
-    },
-    rightChevron: {
-        id: 'rightChevron',
-        name: 'Right Chevron',
-        points: [
-            { x: 0, y: 0 },
-            { x: 100, y: 50 },
-            { x: 0, y: 100 },
-            { x: 30, y: 50 }
-        ]
-    },
-    close: {
-        id: 'close',
-        name: 'Close',
-        points: [
-            { x: 20, y: 0 },
-            { x: 0, y: 20 },
-            { x: 30, y: 50 },
-            { x: 0, y: 80 },
-            { x: 20, y: 100 },
-            { x: 50, y: 70 },
-            { x: 80, y: 100 },
-            { x: 100, y: 80 },
-            { x: 70, y: 50 },
-            { x: 100, y: 20 },
-            { x: 80, y: 0 },
-            { x: 50, y: 30 }
-        ]
-    },
-    message: {
-        id: 'message',
-        name: 'Message',
-        points: [
-            { x: 0, y: 0 },
-            { x: 100, y: 0 },
-            { x: 100, y: 75 },
-            { x: 75, y: 75 },
-            { x: 75, y: 100 },
-            { x: 50, y: 75 },
-            { x: 0, y: 75 }
-        ]
-    },
-    cloud: {
-        id: 'cloud',
-        name: 'Cloud',
-        points: [
-             { x: 5, y: 65 },
-             { x: 20, y: 35 },
-             { x: 55, y: 35 },
-             { x: 65, y: 15 },
-             { x: 95, y: 35 },
-             { x: 95, y: 75 },
-             { x: 55, y: 75 }, 
-             { x: 50, y: 70 },
-             { x: 45, y: 75 },
-             { x: 5, y: 75 }
-        ]
-    },
-    circle: {
-        id: 'circle',
-        name: 'Circle',
-        type: 'circle',
-        params: { cx: 50, cy: 50, r: 30 }
-    },
-    ellipse: {
-        id: 'ellipse',
-        name: 'Ellipse',
-        type: 'ellipse',
-        params: { cx: 50, cy: 50, rx: 25, ry: 40 }
-    },
-    inset: {
-        id: 'inset',
-        name: 'Inset',
-        type: 'inset',
-        params: { t: 5, r: 20, b: 15, l: 10 }
-    },
-    custom: {
-        id: 'custom',
-        name: 'Custom',
-        type: 'polygon',
-        points: []
-    }
+	rhombus: {
+		id: 'rhombus',
+		name: 'Rhombus',
+		points: [
+			{ x: 50, y: 0 },
+			{ x: 100, y: 50 },
+			{ x: 50, y: 100 },
+			{ x: 0, y: 50 },
+		],
+	},
+	trapezoid: {
+		id: 'trapezoid',
+		name: 'Trapezoid',
+		points: [
+			{ x: 20, y: 0 },
+			{ x: 80, y: 0 },
+			{ x: 100, y: 100 },
+			{ x: 0, y: 100 },
+		],
+	},
+	parallelogram: {
+		id: 'parallelogram',
+		name: 'Parallelogram',
+		points: [
+			{ x: 25, y: 0 },
+			{ x: 100, y: 0 },
+			{ x: 75, y: 100 },
+			{ x: 0, y: 100 },
+		],
+	},
+	arrowLeft: {
+		id: 'arrowLeft',
+		name: 'Left Arrow',
+		points: [
+			{ x: 100, y: 25 },
+			{ x: 40, y: 25 },
+			{ x: 40, y: 0 },
+			{ x: 0, y: 50 },
+			{ x: 40, y: 100 },
+			{ x: 40, y: 75 },
+			{ x: 100, y: 75 },
+		],
+	},
+	arrowRight: {
+		id: 'arrowRight',
+		name: 'Right Arrow',
+		points: [
+			{ x: 0, y: 25 },
+			{ x: 60, y: 25 },
+			{ x: 60, y: 0 },
+			{ x: 100, y: 50 },
+			{ x: 60, y: 100 },
+			{ x: 60, y: 75 },
+			{ x: 0, y: 75 },
+		],
+	},
+	octagon: {
+		id: 'octagon',
+		name: 'Octagon',
+		points: [
+			{ x: 30, y: 0 },
+			{ x: 70, y: 0 },
+			{ x: 100, y: 30 },
+			{ x: 100, y: 70 },
+			{ x: 70, y: 100 },
+			{ x: 30, y: 100 },
+			{ x: 0, y: 70 },
+			{ x: 0, y: 30 },
+		],
+	},
+	decagon: {
+		id: 'decagon',
+		name: 'Decagon',
+		points: [
+			{ x: 50, y: 0 },
+			{ x: 80, y: 10 },
+			{ x: 100, y: 35 },
+			{ x: 100, y: 65 },
+			{ x: 80, y: 90 },
+			{ x: 50, y: 100 },
+			{ x: 20, y: 90 },
+			{ x: 0, y: 65 },
+			{ x: 0, y: 35 },
+			{ x: 20, y: 10 },
+		],
+	},
+	bevel: {
+		id: 'bevel',
+		name: 'Bevel',
+		points: [
+			{ x: 20, y: 0 },
+			{ x: 80, y: 0 },
+			{ x: 100, y: 20 },
+			{ x: 100, y: 80 },
+			{ x: 80, y: 100 },
+			{ x: 20, y: 100 },
+			{ x: 0, y: 80 },
+			{ x: 0, y: 20 },
+		],
+	},
+	rabbet: {
+		id: 'rabbet',
+		name: 'Rabbet',
+		points: [
+			{ x: 20, y: 0 },
+			{ x: 80, y: 0 },
+			{ x: 80, y: 20 },
+			{ x: 100, y: 20 },
+			{ x: 100, y: 100 },
+			{ x: 0, y: 100 },
+			{ x: 0, y: 20 },
+			{ x: 20, y: 20 },
+		],
+	},
+	leftPoint: {
+		id: 'leftPoint',
+		name: 'Left Point',
+		points: [
+			{ x: 0, y: 50 },
+			{ x: 25, y: 0 },
+			{ x: 100, y: 0 },
+			{ x: 100, y: 100 },
+			{ x: 25, y: 100 },
+		],
+	},
+	rightPoint: {
+		id: 'rightPoint',
+		name: 'Right Point',
+		points: [
+			{ x: 0, y: 0 },
+			{ x: 75, y: 0 },
+			{ x: 100, y: 50 },
+			{ x: 75, y: 100 },
+			{ x: 0, y: 100 },
+		],
+	},
+	leftChevron: {
+		id: 'leftChevron',
+		name: 'Left Chevron',
+		points: [
+			{ x: 100, y: 0 },
+			{ x: 0, y: 50 },
+			{ x: 100, y: 100 },
+			{ x: 70, y: 50 },
+		],
+	},
+	rightChevron: {
+		id: 'rightChevron',
+		name: 'Right Chevron',
+		points: [
+			{ x: 0, y: 0 },
+			{ x: 100, y: 50 },
+			{ x: 0, y: 100 },
+			{ x: 30, y: 50 },
+		],
+	},
+	close: {
+		id: 'close',
+		name: 'Close',
+		points: [
+			{ x: 20, y: 0 },
+			{ x: 0, y: 20 },
+			{ x: 30, y: 50 },
+			{ x: 0, y: 80 },
+			{ x: 20, y: 100 },
+			{ x: 50, y: 70 },
+			{ x: 80, y: 100 },
+			{ x: 100, y: 80 },
+			{ x: 70, y: 50 },
+			{ x: 100, y: 20 },
+			{ x: 80, y: 0 },
+			{ x: 50, y: 30 },
+		],
+	},
+	message: {
+		id: 'message',
+		name: 'Message',
+		points: [
+			{ x: 0, y: 0 },
+			{ x: 100, y: 0 },
+			{ x: 100, y: 75 },
+			{ x: 75, y: 75 },
+			{ x: 75, y: 100 },
+			{ x: 50, y: 75 },
+			{ x: 0, y: 75 },
+		],
+	},
+	cloud: {
+		id: 'cloud',
+		name: 'Cloud',
+		points: [
+			{ x: 5, y: 65 },
+			{ x: 20, y: 35 },
+			{ x: 55, y: 35 },
+			{ x: 65, y: 15 },
+			{ x: 95, y: 35 },
+			{ x: 95, y: 75 },
+			{ x: 55, y: 75 },
+			{ x: 50, y: 70 },
+			{ x: 45, y: 75 },
+			{ x: 5, y: 75 },
+		],
+	},
+	circle: {
+		id: 'circle',
+		name: 'Circle',
+		type: 'circle',
+		params: { cx: 50, cy: 50, r: 30 },
+	},
+	ellipse: {
+		id: 'ellipse',
+		name: 'Ellipse',
+		type: 'ellipse',
+		params: { cx: 50, cy: 50, rx: 25, ry: 40 },
+	},
+	inset: {
+		id: 'inset',
+		name: 'Inset',
+		type: 'inset',
+		params: { t: 5, r: 20, b: 15, l: 10 },
+	},
+	custom: {
+		id: 'custom',
+		name: 'Custom',
+		type: 'polygon',
+		points: [],
+	},
 };
 
 export const getShape = (id) => {
-    const shape = SHAPES[id];
-    if (!shape) return null;
-    // Default to polygon type if not specified (for backward compatibility)
-    if (!shape.type) {
-        return { ...shape, type: 'polygon' };
-    }
-    return JSON.parse(JSON.stringify(shape));
+	const shape = SHAPES[id];
+	if (!shape) return null;
+	// Default to polygon type if not specified (for backward compatibility)
+	if (!shape.type) {
+		return { ...shape, type: 'polygon' };
+	}
+	return JSON.parse(JSON.stringify(shape));
 };

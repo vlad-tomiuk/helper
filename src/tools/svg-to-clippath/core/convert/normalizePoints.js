@@ -73,7 +73,7 @@ export function getPointsBBox(points) {
 	const width = maxX - minX;
 	const height = maxY - minY;
 	// Avoid division by zero, default to square
-	const aspectRatio = (height === 0 || width === 0) ? 1 : width / height;
+	const aspectRatio = height === 0 || width === 0 ? 1 : width / height;
 
 	return { width, height, aspectRatio };
 }
