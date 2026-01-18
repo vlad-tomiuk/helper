@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Scissors, Shapes, MousePointer2, Ratio, Key } from 'lucide-react';
+import { Scissors, Shapes, MousePointer2, Ratio, Key, FileCode } from 'lucide-react';
 
 const tools = [
 	{
@@ -47,6 +47,15 @@ const tools = [
 		descKey: 'tools.masterKeyGenerator.desc',
 		path: '/master-key-generator',
 		color: 'green',
+		available: true,
+	},
+	{
+		id: 'vs-extensions',
+		icon: FileCode,
+		nameKey: 'tools.vsExtensions.name',
+		descKey: 'tools.vsExtensions.desc',
+		path: '/vs-extensions',
+		color: 'blue',
 		available: true,
 	},
 ];

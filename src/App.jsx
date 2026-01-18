@@ -6,6 +6,8 @@ import PatternGenerator from './tools/custom-shapes/PatternGenerator';
 import viteLogo from './assets/vite.svg';
 import reactLogo from './assets/react.svg';
 import MasterKeyGenerator from './tools/master-key-generator/MasterKeyGenerator';
+import VSExtensions from './tools/vs-extensions/VSExtensions';
+import { FileCode } from 'lucide-react';
 
 function OriginalDemo() {
 	const [count, setCount] = useState(0);
@@ -47,6 +49,7 @@ function App() {
 			return seg && ['blob', 'wave', 'pattern'].includes(seg) ? seg : 'home';
 		}
 		if (path === '/master-key-generator') return 'master-key';
+		if (path === '/vs-extensions') return 'vs-extensions';
 		if (path.startsWith('/clippy-generator')) return 'clippy';
 		return 'home';
 	});
@@ -62,6 +65,8 @@ function App() {
 				);
 			} else if (newPath === '/master-key-generator') {
 				setPage('master-key');
+			} else if (newPath === '/vs-extensions') {
+				setPage('vs-extensions');
 			} else if (newPath.startsWith('/clippy-generator')) {
 				setPage('clippy');
 			} else {
@@ -79,6 +84,9 @@ function App() {
 		} else if (target === 'shape-home') {
 			window.history.pushState({}, '', '/shape-generator');
 			setPage('home');
+		} else if (target === 'vs-extensions') {
+			window.history.pushState({}, '', '/vs-extensions');
+			setPage('vs-extensions');
 		} else {
 			window.history.pushState({}, '', `/shape-generator/${target}`);
 			setPage(target);
@@ -108,6 +116,8 @@ function App() {
 				return <PatternGenerator />;
 			case 'master-key':
 				return <MasterKeyGenerator />;
+			case 'vs-extensions':
+				return <VSExtensions />;
 			default:
 				return (
 					<div
@@ -156,6 +166,29 @@ function App() {
 								}}
 							>
 								Master Key Generator
+							</button>
+							<button
+								onClick={() => navigate('vs-extensions')}
+								style={{
+									padding: '1.5rem 2rem',
+									fontSize: '1.2rem',
+									cursor: 'pointer',
+									background: 'linear-gradient(135deg, #007ACC, #005099)',
+									border: 'none',
+									color: 'white',
+									borderRadius: '12px',
+									display: 'flex',
+									flexDirection: 'column',
+									alignItems: 'center',
+									gap: '0.5rem',
+									minWidth: '200px'
+								}}
+							>
+								<FileCode size={32} />
+								<span style={{ fontWeight: 'bold' }}>Visual Studio</span>
+								<span style={{ fontSize: '0.8rem', opacity: 0.9, fontWeight: 'normal' }}>
+									Швидке викачування плагінів
+								</span>
 							</button>
 							{/* 
               <button onClick={() => navigate('wave')}>Wave Generator</button>

@@ -42,6 +42,10 @@
 		"shapeGenerator": {
 			"name": "Custom Shapes",
 			"desc": "Generate customizable organic blobs and shapes"
+		},
+		"vsExtensions": {
+			"name": "Visual Studio Extensions",
+			"desc": "Quick download of VSIX plugins for Visual Studio"
 		}
 	},
 	"svgToClippath": {
@@ -190,5 +194,27 @@
 		"fieldTitle": "Title",
 		"fieldUrl": "URL",
 		"fieldText": "Text"
+	},
+	"vsExtensions": {
+		"title": "Visual Studio Extensions Downloader",
+		"description": "Enter a Marketplace URL to download the .vsix file.",
+		"urlLabel": "Marketplace URL",
+		"placeholder": "Enter Marketplace URL or ID (e.g. publisher.extension)",
+		"fetchButton": "Search",
+		"loading": "Loading...",
+		"readyToDownload": "Ready to Download",
+		"extensionLabel": "Extension",
+		"publisherLabel": "Publisher",
+		"versionLabel": "Version",
+		"downloadButton": "Download .vsix",
+		"directDownloadNote": "Direct download from marketplace.visualstudio.com",
+		"errorInvalidUrl": "Invalid Marketplace URL. Expected format: ...?itemName=publisher.extension",
+		"errorFetchFailed": "Could not fetch detailed versions via proxy.",
+		"backToHome": "Back to Home",
+		"fetchErrorFallback": "Could not fetch version list. Defaulting to 'Latest'.",
+		"loadMore": "Load More",
+		"noResults": "No extensions found.",
+		"searchResults": "Search Results",
+		"resultsCount": "{{count}} results found"
 	}
 }

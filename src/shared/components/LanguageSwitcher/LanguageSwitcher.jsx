@@ -89,10 +89,10 @@ export default function LanguageSwitcher() {
 								<Select.Item
 									key={lang.code}
 									value={lang.code}
-									className="relative flex items-center gap-3 px-3 py-2 rounded-md text-sm outline-none cursor-pointer select-none hover:bg-gray-100 dark:hover:bg-gray-700 data-[state=checked]:bg-indigo-50 dark:data-[state=checked]:bg-indigo-900/20 transition-colors"
+									className="relative flex items-center gap-3 px-3 py-2 rounded-md text-sm outline-none cursor-pointer select-none text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[state=checked]:bg-indigo-50 dark:data-[state=checked]:bg-indigo-900/20 transition-colors"
 								>
 									<Flag />
-									<Select.ItemText className="flex-1 text-gray-900 dark:text-gray-100">
+									<Select.ItemText>
 										{lang.label}
 									</Select.ItemText>
 									<Select.ItemIndicator>

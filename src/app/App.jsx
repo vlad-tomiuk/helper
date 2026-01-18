@@ -7,6 +7,7 @@ import ShapeGenerator from '../tools/shape-generator/ShapeGenerator';
 import AspectRatioCalculator from '../tools/aspect-ratio-calculator/AspectRatioCalculator';
 import BlobGenerator from '../tools/custom-shapes/BlobGenerator';
 import MasterKeyGenerator from '../tools/master-key-generator/MasterKeyGenerator';
+import VSExtensions from '../tools/vs-extensions/VSExtensions';
 
 export default function App() {
 	return (
@@ -18,14 +19,9 @@ export default function App() {
 					<Route path="/svg-to-clippath" element={<SvgToClipPath />} />
 					<Route path="/clip-path-generator" element={<ShapeGenerator />} />
 					<Route path="/shape-generator" element={<BlobGenerator />} />
-					<Route
-						path="/aspect-ratio-calculator"
-						element={<AspectRatioCalculator />}
-					/>
-					<Route
-						path="/master-key-generator"
-						element={<MasterKeyGenerator />}
-					/>
+					<Route path="/aspect-ratio-calculator" element={<AspectRatioCalculator />} />
+					<Route path="/master-key-generator" element={<MasterKeyGenerator />} />
+					<Route path="/vs-extensions" element={<VSExtensions />} />
 				</Routes>
 			</div>
 		</HashRouter>
