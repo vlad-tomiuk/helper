@@ -24,6 +24,51 @@ export default function VSExtensions() {
     const [iconUrl, setIconUrl] = useState('');
 
     const PAGE_SIZE = 15;
+    
+    // Proxy handling logic
+    const PROXY_LIST = [
+        // 1. Direct/Local Proxy (Works in Dev, fails in Prod usually)
+        (url) => url,
+        // 2. Corsproxy.io (Very reliable)
+        (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+        // 3. AllOrigins (Fallback)
+        (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
+    ];
+
+    const fetchWithFallback = async (targetUrl, options) => {
+        let lastError;
+
+        for (const proxyFn of PROXY_LIST) {
+            try {
+                const finalUrl = proxyFn(targetUrl);
+                // If using local proxy (starts with /), don't change it.
+                // If actual URL, ensure it's absolute for proxies.
+                // Our targetUrl here is relative '/vs-api/...' for dev, but for prod we need absolute for proxies.
+                
+                // ADJUSTMENT: We need to handle the URL construction carefully.
+                // Dev: /vs-api/... -> Local Vite Proxy -> VS Marketplace
+                // Prod: https://marketplace... -> CORS Proxy
+                
+                let fetchUrl = finalUrl;
+                
+                // If we are in PROD mode (implied by failing first attempt or just standard check), 
+                // we should be targeting the real URL via a proxy, not the local /vs-api path.
+                
+                // Let's redefine the strategy:
+                // Attempt 1: Standard Configured Path (Local Proxy or Direct)
+                // If that fails, switch to Full URL + CORS Proxy.
+                
+                const response = await fetch(fetchUrl, options);
+                if (!response.ok) throw new Error(`Status: ${response.status}`);
+                return await response.json();
+            } catch (err) {
+                console.warn(`Proxy attempt failed: ${proxyFn(targetUrl)}`, err);
+                lastError = err;
+                // Continue to next proxy
+            }
+        }
+        throw lastError;
+    };
 
     const parseInput = (input) => {
         // 1. Check if URL
@@ -42,8 +87,6 @@ export default function VSExtensions() {
         }
         
         // 2. Check if "Potential ID" (No spaces, contains dot)
-        // Example: "ms-vscode.remote-server" OR "Node.js"
-        // We will TRY this as an ID first, but if it fails, we fall back to search.
         if (input.includes('.') && !input.includes(' ')) {
              const parts = input.split('.');
              if (parts.length >= 2 && parts[0] && parts[1]) {
@@ -56,7 +99,11 @@ export default function VSExtensions() {
     };
 
     const fetchExtensions = async (criteria, page = 1) => {
-        const apiLink = '/vs-api/extensionquery';
+        // We define the REAL target endpoint for proxies
+        const realTarget = 'https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery';
+        // The local path for dev
+        const localPath = '/vs-api/extensionquery';
+
         const body = {
             filters: [
                 {
@@ -65,20 +112,46 @@ export default function VSExtensions() {
                     pageSize: PAGE_SIZE
                 }
             ],
-            flags: 271 // IncludeVersions | IncludeFiles | ...
+            flags: 271
         };
 
-        const response = await fetch(apiLink, {
+        const options = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json;api-version=3.0-preview.1'
             },
             body: JSON.stringify(body)
-        });
+        };
 
-        if (!response.ok) throw new Error(`API Error: ${response.status}`);
-        return await response.json();
+        // Try Local/Primary first
+        try {
+            const response = await fetch(localPath, options);
+            if (!response.ok) throw new Error(`Local Proxy Failed: ${response.status}`);
+            return await response.json();
+        } catch (err) {
+            console.warn('Primary fetch failed, trying CORS proxies...', err);
+            
+            // Fallback Chain
+            const proxies = [
+                // Proxy 1: Corsproxy.io
+                `https://corsproxy.io/?${encodeURIComponent(realTarget)}`,
+                // Proxy 2: AllOrigins (Less reliable for POST, but worth a try if supported)
+                // Note: straightforward POSTs might not work with all free proxies due to body handling. 
+                // Let's rely on corsproxy.io primarily as it handles POST well.
+            ];
+
+            for (const proxyUrl of proxies) {
+               try {
+                   const res = await fetch(proxyUrl, options);
+                   if (!res.ok) throw new Error(`Proxy ${proxyUrl} failed`);
+                   return await res.json();
+               } catch (e) {
+                   console.error(e);
+               }
+            }
+            throw new Error(t('vsExtensions.errorFetchFailed'));
+        }
     };
 
     const handleSearch = async (e) => {
