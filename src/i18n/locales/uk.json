@@ -42,6 +42,10 @@
 		"shapeGenerator": {
 			"name": "Кастомні Фігури",
 			"desc": "Генератор органічних блобів та фігур"
+		},
+		"vsExtensions": {
+			"name": "Плагіни Visual Studio",
+			"desc": "Швидке викачування плагінів із візуал студіо в форматі vsix"
 		}
 	},
 	"svgToClippath": {
@@ -190,5 +194,27 @@
 		"fieldTitle": "Назва",
 		"fieldUrl": "URL",
 		"fieldText": "Текст"
+	},
+	"vsExtensions": {
+		"title": "Завантажувач розширень Visual Studio",
+		"description": "Введіть URL-адресу з Marketplace, щоб завантажити файл .vsix.",
+		"urlLabel": "URL-адреса Marketplace",
+		"placeholder": "Введіть URL або ID (наприклад publisher.extension)",
+		"fetchButton": "Пошук",
+		"loading": "Завантаження...",
+		"readyToDownload": "Готово до скачування",
+		"extensionLabel": "Розширення",
+		"publisherLabel": "Видавець",
+		"versionLabel": "Версія",
+		"downloadButton": "Завантажити .vsix",
+		"directDownloadNote": "Пряме завантаження з marketplace.visualstudio.com",
+		"errorInvalidUrl": "Невірна URL-адреса. Очікуваний формат: ...?itemName=publisher.extension",
+		"errorFetchFailed": "Не вдалося отримати детальні версії через проксі.",
+		"backToHome": "На головну",
+		"fetchErrorFallback": "Не вдалося отримати список версій. Використовується 'Latest'.",
+		"loadMore": "Завантажити ще",
+		"noResults": "Розширень не знайдено.",
+		"searchResults": "Результати пошуку",
+		"resultsCount": "Знайдено {{count}} результатів"
 	}
 }
